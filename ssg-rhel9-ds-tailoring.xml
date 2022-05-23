@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xccdf:Tailoring xmlns:xccdf="http://checklists.nist.gov/xccdf/1.2" id="xccdf_scap-workbench_tailoring_default">
+  <xccdf:benchmark href="/tmp/scap-workbench-KBKIjG/ssg-rhel9-ds.xml"/>
+  <xccdf:version time="2022-05-23T11:39:53">1</xccdf:version>
+  <xccdf:Profile id="xccdf_org.ssgproject.content_profile_cis_server_l1_customized" extends="xccdf_org.ssgproject.content_profile_cis_server_l1">
+    <xccdf:title xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">[DRAFT] CIS Red Hat Enterprise Linux 9 Benchmark for Level 1 - Server [CUSTOMIZED]</xccdf:title>
+    <xccdf:description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">This is a draft profile based on its RHEL8 version for experimental purposes.
+It is not based on the CIS benchmark for RHEL9, because this one was not available at time of
+the release.</xccdf:description>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_principle-least-privilege" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_general-principles" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_intro" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_principle-use-security-tools" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_principle-minimize-software" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_sssd" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_sssd-ldap" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sssd_offline_cred_expiration" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sssd_enable_smartcards" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sssd_enable_certmap" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sssd_certificate_verification" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sshd_enable_gssapi_auth" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_mcafeetp_installed" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_mcafee_endpoint_security_software" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_mcafee_security_software" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_endpoint_security_software" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_logging" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_rsyslog_sending_messages" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_remote_tls_cacert" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_remote_tls" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_remote_loghost" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_rsyslog_accepting_remote_messages" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_nolisten" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_accept_remote_messages_udp" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_accept_remote_messages_tcp" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_service_syslogng_enabled" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_syslogng_installed" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_log_rotation" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_ensure_logrotate_activated" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_journald" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_journald_storage" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_journald_forward_to_syslog" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_journald_compress" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_ensure_rsyslog_log_file_configuration" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_remote_access_monitoring" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_files_permissions" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_files_ownership" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_files_groupownership" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_encrypt_offload_defaultnetstreamdriver" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_encrypt_offload_actionsendstreamdrivermode" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_encrypt_offload_actionsendstreamdriverauthmode" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_rsyslog_cron_logging" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_configure_logwatch_on_logserver" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_service_rsyslog_enabled" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_rsyslog_installed" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_rsyslog-gnutls_installed" selected="false"/>
+  </xccdf:Profile>
+</xccdf:Tailoring>
